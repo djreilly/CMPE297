@@ -430,6 +430,7 @@ void cpu_idle(void)
 	 */
 	boot_init_stack_canary();
 	current_thread_info()->status |= TS_POLLING;
+	printk("Hello World\n");
 
 	while (1) {
 		tick_nohz_idle_enter();
